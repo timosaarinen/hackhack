@@ -1,0 +1,29 @@
+{
+  "name": "hackhack",
+  "version": "1.0.0",
+  "description": "Hack & Hack - XR Tabletop Role-Playing Game (XRTRPG)",
+  "main": "main.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/timosaarinen/hackhack.git"
+  },
+  "keywords": [
+    "xrtrpg"
+  ],
+  "author": "Timo Saarinen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/timosaarinen/hackhack/issues"
+  },
+  "homepage": "https://github.com/timosaarinen/hackhack#readme",
+  "dependencies": {
+    "three": "^0.163.0"
+  },
+  "devDependencies": {
+    "vite": "^5.2.7"
+  }
+}
