@@ -23,22 +23,11 @@ function newbutton(): HTMLButtonElement   { return document.createElement('butto
 function newimage(): HTMLImageElement     { return document.createElement('img'); }
 
 //************************************************************************
-//  TODO: clean
+//  Logging and Misc
 //************************************************************************
-//function select(selector, parent = document) { return parent.querySelector(selector); }
-//function selectall(selector, parent = document) { return Array.from(parent.querySelectorAll(selector)); }
-
-//function newelement(tag, options = {}) {
-//   const el = document.createElement(tag);
-//   Object.entries(options).forEach(([key, value]) => {
-//     if (key === 'class') {
-//       el.className = value;
-//     } else {
-//       el.setAttribute(key, value);
-//     }
-//   });
-//   return el;
-// }
+export function log(msg: string): void {
+  console.log(msg);
+}
 
 //************************************************************************
 //  Events
@@ -48,9 +37,6 @@ export function on(e: Elem, event: any, handler: any) {
 }
 export function off(e: Elem, event: any, handler: any) {
   e.div.removeEventListener(event, handler);
-}
-export function log(msg: string): void {
-  console.log(msg);
 }
 
 //************************************************************************
@@ -73,8 +59,6 @@ export function textinput(placeholder: string): Elem {
   const div = newinput();
   div.type = 'text';
   div.placeholder = placeholder;
-  // TODO: use CSS classes or straight up inline styles? CSS classes are more compact/optimal...
-  //inputElement.classList.add('input', 'input-bordered', 'input-primary', 'w-full', 'mb-4');
   return {div: div}
 }
 export function button(txt: string, onclick: any): Elem {
@@ -85,8 +69,7 @@ export function button(txt: string, onclick: any): Elem {
 }
 export function divimage(imageurl: string): Elem {
   const div = newimage();
-  div.src = imageurl; //div.src = `url('${imageurl}')`;
-  //div.style.width = '100%';
+  div.src = imageurl;
   div.style.height = '100%';
   div.style.objectFit = 'contain';
   div.className = 'logo-container'; // TODO: temp
@@ -102,8 +85,7 @@ export function divcover(imageurl: string, es: Elem[]): Elem {
   div.style.height = '100vh';
   div.style.backgroundSize = 'cover';
   div.style.backgroundPosition = 'center';
-  div.style.width = "100vw";
-  div.className = 'divcover';
+  div.className = 'divcover'; // TODO: temp
   return {div: div}
 }
 
