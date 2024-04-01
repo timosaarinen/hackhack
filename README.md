@@ -1,6 +1,6 @@
 # Hack & Hack - XR Tabletop Role-Playing Game (XRTRPG)
 
-...
+Build deployment: https://hh.tsaari42.net
 
 ## Character Creation (..yes, the hardest part of any game)
 
