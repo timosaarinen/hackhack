@@ -83,16 +83,13 @@ export function button(txt: string, onclick: any): Elem {
   div.addEventListener('click', onclick);
   return {div: div}
 }
-export function divbackground(imageurl: string, es: Elem[]): Elem {
+export function divimage(imageurl: string): Elem {
   const div = newdiv();
-  es.forEach(e => { div.appendChild(e.div) });
-
   div.style.backgroundImage = `url('${imageurl}')`;
-  // Additional style options to make the background cover the div nicely
   div.style.width = '100%';
   div.style.height = '100%';
-  div.style.backgroundSize = 'cover';
   div.style.backgroundPosition = 'center';
+  div.style.backgroundRepeat = 'no-repeat';
   return {div: div}
 }
 export function divcover(imageurl: string, es: Elem[]): Elem {
