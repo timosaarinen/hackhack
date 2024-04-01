@@ -20,6 +20,7 @@ function root(): HTMLDivElement           { return document.getElementById('root
 function newdiv(): HTMLDivElement         { return document.createElement('div'); }
 function newinput(): HTMLInputElement     { return document.createElement('input'); }
 function newbutton(): HTMLButtonElement   { return document.createElement('button'); }
+//function newimage(): HTMLImageElement     { return document.createElement('image'); }
 
 //************************************************************************
 //  TODO: clean
@@ -80,6 +81,32 @@ export function button(txt: string, onclick: any): Elem {
   const div = newbutton();
   div.textContent = txt;
   div.addEventListener('click', onclick);
+  return {div: div}
+}
+export function divbackground(imageurl: string, es: Elem[]): Elem {
+  const div = newdiv();
+  es.forEach(e => { div.appendChild(e.div) });
+
+  div.style.backgroundImage = `url('${imageurl}')`;
+  // Additional style options to make the background cover the div nicely
+  div.style.width = '100%';
+  div.style.height = '100%';
+  div.style.backgroundSize = 'cover';
+  div.style.backgroundPosition = 'center';
+  return {div: div}
+}
+export function divcover(imageurl: string, es: Elem[]): Elem {
+  const div = newdiv();
+  es.forEach(e => { div.appendChild(e.div) });
+
+  div.style.backgroundImage = `url('${imageurl}')`;
+  // Additional style options to make the background cover the div nicely
+  div.style.width = '100vw';
+  div.style.height = '100vh';
+  div.style.backgroundSize = 'cover';
+  div.style.backgroundPosition = 'center';
+  div.style.width = "100vw";
+  div.className = 'divcover';
   return {div: div}
 }
 

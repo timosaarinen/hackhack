@@ -98,3 +98,17 @@ h1 {
       margin-bottom: 0px;
   }
 }
+
+/*----------------------------------------------------------------------*/
+.divcover {
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  min-height: 675px;
+  background-color: #000;
+  color: #FFF;
+}
