@@ -13,6 +13,6 @@ export const VCOMP = () => {
     //LAZY.text("Hack & Hack"),
     LAZY.divimage(hhtitleimage),
     LAZY.textinput("Your character name.."),
-    LAZY.button("Enter", onEnter)
+    LAZY.button("Enter The World of H&H", onEnter)
   ])
 };

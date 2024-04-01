@@ -101,12 +101,15 @@ h1 {
 
 /*----------------------------------------------------------------------*/
 button {
+  width: 250px;
+  height: 42px;
   margin: 4px;
-  padding: 4px;
+  margin-bottom: 32px;
 }
-textinput {
+input {
+  width: 192px;
+  height: 42px;
   margin: 4px;
-  padding: 4px;
 }
 
 .divcover {
@@ -120,4 +123,28 @@ textinput {
   min-height: 675px;
   background-color: #000;
   color: #FFF;
+}
+
+.logo-container {
+  animation: zoomSplat 10.5s ease-out forwards;
+}
+@keyframes zoomSplat {
+  0% {
+    transform: scale(0.01);
+    opacity: 0;
+  }
+  /* 95% {
+    rotate: 370deg;
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  98% {
+    rotate: 355deg;
+    transform: scale(0.99);
+    opacity: 1;
+  } */
+  100% {
+    rotate: 360deg;
+    transform: scale(1.0);
+  }
 }

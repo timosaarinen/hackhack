@@ -90,6 +90,7 @@ export function divimage(imageurl: string): Elem {
   div.style.height = '100%';
   div.style.backgroundPosition = 'center';
   div.style.backgroundRepeat = 'no-repeat';
+  div.className = 'logo-container'; // TODO: temp
   return {div: div}
 }
 export function divcover(imageurl: string, es: Elem[]): Elem {
