@@ -100,11 +100,12 @@ h1 {
 }
 
 /*----------------------------------------------------------------------*/
+/* TODO: temp */
 button {
   width: 250px;
   height: 42px;
   margin: 4px;
-  margin-bottom: 32px;
+  margin-bottom: 64px;
 }
 input {
   width: 192px;
@@ -144,7 +145,7 @@ input {
     opacity: 1;
   } */
   100% {
-    rotate: 360deg;
-    transform: scale(1.0);
+    /* rotate: 360deg; */
+    transform: scale(0.5);
   }
 }

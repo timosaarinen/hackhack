@@ -20,7 +20,7 @@ function root(): HTMLDivElement           { return document.getElementById('root
 function newdiv(): HTMLDivElement         { return document.createElement('div'); }
 function newinput(): HTMLInputElement     { return document.createElement('input'); }
 function newbutton(): HTMLButtonElement   { return document.createElement('button'); }
-//function newimage(): HTMLImageElement     { return document.createElement('image'); }
+function newimage(): HTMLImageElement     { return document.createElement('img'); }
 
 //************************************************************************
 //  TODO: clean
@@ -84,12 +84,11 @@ export function button(txt: string, onclick: any): Elem {
   return {div: div}
 }
 export function divimage(imageurl: string): Elem {
-  const div = newdiv();
-  div.style.backgroundImage = `url('${imageurl}')`;
-  div.style.width = '100%';
+  const div = newimage();
+  div.src = imageurl; //div.src = `url('${imageurl}')`;
+  //div.style.width = '100%';
   div.style.height = '100%';
-  div.style.backgroundPosition = 'center';
-  div.style.backgroundRepeat = 'no-repeat';
+  div.style.objectFit = 'contain';
   div.className = 'logo-container'; // TODO: temp
   return {div: div}
 }

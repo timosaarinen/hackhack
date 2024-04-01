@@ -1,5 +1,5 @@
 import * as LAZY from '../lib/lazy-dom'
-import bgimage from '@asset/bg/inn.webp'
+import bgimage      from '@asset/bg/inn.webp'
 import hhtitleimage from '@asset/hh-logo.webp'
 
 export const VCOMP = () => {
