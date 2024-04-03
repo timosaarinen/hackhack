@@ -6,7 +6,7 @@ import {
 
 const _changeEvent = { type: 'change' };
 
-class FlyCamera extends EventDispatcher {
+export class FlyCamera extends EventDispatcher {
 
 	constructor( object, domElement ) {
 
@@ -322,5 +322,3 @@ class FlyCamera extends EventDispatcher {
 	}
 
 }
-
-export { FlyCamera };

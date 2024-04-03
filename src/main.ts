@@ -3,6 +3,7 @@ import './main.css'
 //import {VCOMP as characterCreationScreen} from './screen/charactercreation'
 //import * as LAZY from './lib/lazy-dom'
 import { FlyCamera } from './lib/ixr/flycamera'
+import { OrbitCamera } from './lib/ixr/orbitcamera'
 import { FontLoader } from 'three/addons/loaders/FontLoader.js'
 import { TextGeometry } from 'three/addons/geometries/TextGeometry.js'
 //import defaultfont from '@asset/font/helvetiker_bold.typeface.json' // TODO
@@ -33,6 +34,7 @@ interface State {
   background: number, // TODO: type
   mouse: MouseState,
   fly: FlyCamera | undefined,
+  orbit: OrbitCamera | undefined,
 }
 const ctx: State = {
   clock: new THREE.Clock(),
@@ -42,6 +44,7 @@ const ctx: State = {
   background: 0x0000018,
   mouse: { x: 0, y: 0, pos: new THREE.Vector2(0,0) },
   fly: undefined,
+  orbit: undefined,
 };
 //------------------------------------------------------------------------
 
@@ -183,7 +186,10 @@ function onload() {
   //   ctx.mouse.pos.y = ctx.mouse.y;
   // })
 
-  ctx.fly = new FlyCamera(ctx.camera, ctx.renderer.domElement);
+  //ctx.fly = new FlyCamera(ctx.camera, ctx.renderer.domElement);
+  ctx.orbit = new OrbitCamera(ctx.camera, ctx.renderer.domElement);
+  orbit.maxPolarAngle = Math.PI / 2;
+  orbit.update();
 
   renderframe(); // start frame loop
 }
@@ -195,7 +201,9 @@ function onresize() {
 
 function renderframe() {
   const delta = ctx.clock.getDelta();
-  if(ctx.fly) {
+  if(ctx.orbit) {
+    // TODO: no update?
+  } else if(ctx.fly) {
     ctx.fly.movementSpeed = 100.0;
     ctx.fly.update(delta);
   } else {
