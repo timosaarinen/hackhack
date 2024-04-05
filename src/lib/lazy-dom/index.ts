@@ -16,7 +16,7 @@ interface Elem {
 //************************************************************************
 //  Utility functions
 //************************************************************************
-function root(): HTMLDivElement           { return document.getElementById('root') as HTMLDivElement; }
+function root(): HTMLDivElement           { return document.getElementById('layer1') as HTMLDivElement; }
 function newdiv(): HTMLDivElement         { return document.createElement('div'); }
 function newinput(): HTMLInputElement     { return document.createElement('input'); }
 function newbutton(): HTMLButtonElement   { return document.createElement('button'); }
