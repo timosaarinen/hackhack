@@ -177,7 +177,7 @@ function onload() {
   createRectLight();
   //create3dText();
 
-  document.body.appendChild(ctx.renderer.domElement);
+  LAZY.getlayerdom(0).appendChild(ctx.renderer.domElement); //document.body.appendChild(ctx.renderer.domElement);
 
   // document.addEventListener('mousemove', (event) => { 
   //   ctx.mouse.x = event.clientX/window.innerWidth*2 - 1;
