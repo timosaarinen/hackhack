@@ -9,6 +9,8 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
+      //'islefire-xr': path.resolve(__dirname, './ext/islefire-xr/dist/islefire-xr.js'),
+      'islefire-xr': path.resolve(__dirname, './ext/islefire-xr'),
       '@asset': path.resolve(__dirname, 'asset')
     }
   }
