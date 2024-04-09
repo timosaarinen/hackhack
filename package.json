@@ -6,9 +6,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "lint": "npx eslint --ext js ./src",
-    "lint:fix": "npx eslint --ext js ./src --fix"
+    "prebuild": "curl -o src/types/islefire-xr-0.d.ts https://islefire.tsaari42.net/islefire-xr-0.d.ts",
+    "build": "tsc",
+    "lint": "eslint --ext js ./src",
+    "lint:fix": "eslint --ext js ./src --fix"
   },
   "repository": {
     "type": "git",
@@ -23,14 +24,19 @@
     "url": "https://github.com/timosaarinen/hackhack/issues"
   },
   "homepage": "https://github.com/timosaarinen/hackhack#readme",
-  "dependencies": {
-    "islefire-xr": "file:ext/islefire-xr"
-  },
   "devDependencies": {
-    "typescript": "^5.4.3",
-    "vite": "^5.2.7",
-    "vite-plugin-glsl": "^1.2.1",
+    "@eslint/eslintrc": "^3.0.2",
+    "@eslint/js": "^9.0.0",
+    "@typescript-eslint/eslint-plugin": "^7.6.0",
+    "@typescript-eslint/parser": "^7.6.0",
     "eslint": "^8.57.0",
-    "prettier": "^3.2.5"
+    "eslint-config-xo-typescript": "^4.0.0",
+    "eslint-plugin-react": "^7.34.1",
+    "globals": "^15.0.0",
+    "prettier": "^3.2.5",
+    "typescript": "^5.4.4",
+    "typescript-eslint": "^7.6.0",
+    "vite": "^5.2.7",
+    "vite-plugin-glsl": "^1.2.1"
   }
 }

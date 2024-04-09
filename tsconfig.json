@@ -15,6 +15,7 @@
     "noEmit": true,
     "jsx": "react",
 
+    "baseUrl": ".",
     "outDir": "dist",
     "sourceMap": true,
     "emitDecoratorMetadata": true,
@@ -24,8 +25,13 @@
     "noUnusedLocals": true,
     "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": true,
+    "typeRoots": ["./node_modules/@types", "./src/types"],
+    // TODO: check..
+    "paths": {
+      "*": ["types/*"]
+    }
   },
   "compileOnSave": true,
-  "include": ["./src/**/*"],
+  "include": ["./src/**/*", "./src/types/islefire-xr-0.d.ts"],
   "exclude": ["./src/**/*.test.ts"]
 }
