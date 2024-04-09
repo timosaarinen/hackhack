@@ -1,8 +1,4 @@
-// TODO: should take the src/types/islefire-xr-0.d.ts!!
-// In a type declaration file, e.g., globals.d.ts
-declare var XR: {
-  createCore: () => any; // Adjust the return type accordingly
-};
+//import { XR } from './types/islefire-xr-0'
 
 const xr = XR.createCore()
 console.log(xr)

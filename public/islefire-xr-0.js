@@ -1,0 +1,1 @@
+console.log("Powered by Islefire XR engine - Copyright (c) 2024 Timo Saarinen"),window.XR="VMP";export var XR;!function(e){e.createCore=function(e={fullscreen:!0,xr:!0}){return console.log("XR: Core initialized!"),{}}}(XR||(XR={}));
