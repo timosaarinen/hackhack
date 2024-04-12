@@ -1,4 +1,4 @@
-export declare namespace XR {
+declare namespace XR {
     interface XrConfig {
         fullscreen: boolean;
         xr: boolean;
